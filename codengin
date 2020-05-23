@@ -1,0 +1,944 @@
+00007FF78C120ADB 48 8D 0D 8E 42 0A 00 lea         rcx,[wil::details::g_enabledStateManager (07FF78C1C4D70h)]  
+00007FF78C120AE2 E8 F9 E6 FD FF       call        wil::details::EnabledStateManager::SubscribeFeaturePropertyCacheToEnabledStateChanges (07FF78C0FF1E0h)  
+00007FF78C120AE7 48 8D 0D AE 41 0A 00 lea         rcx,[`wil::Feature<__WilFeatureTraits_Feature_MixedRealityCameraAppLaunchXAMLFilePicker>::GetFeaturePropertyCache'::`2'::data (07FF78C1C4C9Ch)]  
+00007FF78C120AEE 85 DB                test        ebx,ebx  
+00007FF78C120AF0 75 27                jne         wil::Feature<__WilFeatureTraits_Feature_MixedRealityCameraAppLaunchXAMLFilePicker>::GetCachedFeatureEnabledState+0D5h (07FF78C120B19h)  
+00007FF78C120AF2 C1 E6 10             shl         esi,10h  
+00007FF78C120AF5 BA 00 01 00 00       mov         edx,100h  
+00007FF78C120AFA 8B C5                mov         eax,ebp  
+00007FF78C120AFC 44 8B C6             mov         r8d,esi  
+00007FF78C120AFF 4C 0B C0             or          r8,rax  
+00007FF78C120B02 F7 DF                neg         edi  
+00007FF78C120B04 48 1B C0             sbb         rax,rax  
+00007FF78C120B07 48 23 C2             and         rax,rdx  
+00007FF78C120B0A 48 03 C2             add         rax,rdx  
+00007FF78C120B0D 48 8D 15 7C B5 FD FF lea         rdx,[wil_details_SetEnabledAndHasNotificationStateCallback (07FF78C0FC090h)]  
+00007FF78C120B14 4C 0B C0             or          r8,rax  
+00007FF78C120B17 EB 12                jmp         wil::Feature<__WilFeatureTraits_Feature_MixedRealityCameraAppLaunchXAMLFilePicker>::GetCachedFeatureEnabledState+0E7h (07FF78C120B2Bh)  
+00007FF78C120B19 F7 DF                neg         edi  
+00007FF78C120B1B 48 8D 15 EE B5 FD FF lea         rdx,[wil_details_SetHasNotificationStateCallback (07FF78C0FC110h)]  
+00007FF78C120B22 4D 1B C0             sbb         r8,r8  
+00007FF78C120B25 49 F7 D8             neg         r8  
+00007FF78C120B28 49 FF C0             inc         r8  
+00007FF78C120B2B E8 08 B6 FD FF       call        wil_details_ModifyFeatureData (07FF78C0FC138h)  
+00007FF78C120B30 8B DD                mov         ebx,ebp  
+00007FF78C120B32 48 8B 6C 24 38       mov         rbp,qword ptr [rsp+38h]  
+00007FF78C120B37 8B C3                mov         eax,ebx  
+00007FF78C120B39 48 8B 5C 24 30       mov         rbx,qword ptr [rsp+30h]  
+00007FF78C120B3E 48 8B 74 24 40       mov         rsi,qword ptr [rsp+40h]  
+00007FF78C120B43 48 83 C4 20          add         rsp,20h  
+00007FF78C120B47 5F                   pop         rdi  
+00007FF78C120B48 C3                   ret  
+00007FF78C120B49 CC                   int         3  
+00007FF78C120B4A CC                   int         3  
+00007FF78C120B4B CC                   int         3  
+Windows::Storage::Internal::Pickers::IPickerOperation::CallerAppUserModelId::get:
+00007FF78C120B4C 40 53                push        rbx  
+00007FF78C120B4E 48 83 EC 40          sub         rsp,40h  
+00007FF78C120B52 48 C7 44 24 20 FE FF FF FF mov         qword ptr [rsp+20h],0FFFFFFFFFFFFFFFEh  
+00007FF78C120B5B 48 8B 05 8E 75 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C120B62 48 33 C4             xor         rax,rsp  
+00007FF78C120B65 48 89 44 24 38       mov         qword ptr [rsp+38h],rax  
+00007FF78C120B6A 33 DB                xor         ebx,ebx  
+00007FF78C120B6C 48 89 5C 24 28       mov         qword ptr [rsp+28h],rbx  
+00007FF78C120B71 48 8B 01             mov         rax,qword ptr [rcx]  
+00007FF78C120B74 48 8D 54 24 28       lea         rdx,[rsp+28h]  
+00007FF78C120B79 48 8B 40 48          mov         rax,qword ptr [rax+48h]  
+00007FF78C120B7D FF 15 4D 0C 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120B83 85 C0                test        eax,eax  
+00007FF78C120B85 78 45                js          Windows::Storage::Internal::Pickers::IPickerOperation::CallerAppUserModelId::get+80h (07FF78C120BCCh)  
+00007FF78C120B87 48 8B 4C 24 28       mov         rcx,qword ptr [rsp+28h]  
+00007FF78C120B8C 48 85 C9             test        rcx,rcx  
+00007FF78C120B8F 74 18                je          Windows::Storage::Internal::Pickers::IPickerOperation::CallerAppUserModelId::get+5Dh (07FF78C120BA9h)  
+00007FF78C120B91 48 8D 54 24 30       lea         rdx,[rsp+30h]  
+00007FF78C120B96 E8 BE 4F 04 00       call        WindowsDuplicateString (07FF78C165B59h)  
+00007FF78C120B9B 85 C0                test        eax,eax  
+00007FF78C120B9D 78 25                js          Windows::Storage::Internal::Pickers::IPickerOperation::CallerAppUserModelId::get+78h (07FF78C120BC4h)  
+00007FF78C120B9F 48 8B 5C 24 30       mov         rbx,qword ptr [rsp+30h]  
+00007FF78C120BA4 48 8B 4C 24 28       mov         rcx,qword ptr [rsp+28h]  
+00007FF78C120BA9 E8 A5 4F 04 00       call        WindowsDeleteString (07FF78C165B53h)  
+00007FF78C120BAE 48 8B C3             mov         rax,rbx  
+00007FF78C120BB1 48 8B 4C 24 38       mov         rcx,qword ptr [rsp+38h]  
+00007FF78C120BB6 48 33 CC             xor         rcx,rsp  
+00007FF78C120BB9 E8 02 34 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C120BBE 48 83 C4 40          add         rsp,40h  
+00007FF78C120BC2 5B                   pop         rbx  
+00007FF78C120BC3 C3                   ret  
+00007FF78C120BC4 8B C8                mov         ecx,eax  
+00007FF78C120BC6 E8 71 74 FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C120BCB CC                   int         3  
+00007FF78C120BCC 8B C8                mov         ecx,eax  
+00007FF78C120BCE E8 69 74 FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C120BD3 CC                   int         3  
+Windows::Storage::Internal::Pickers::IPickerOperation::CreateActivationEventArgs:
+00007FF78C120BD4 40 53                push        rbx  
+00007FF78C120BD6 48 83 EC 40          sub         rsp,40h  
+00007FF78C120BDA 48 C7 44 24 20 FE FF FF FF mov         qword ptr [rsp+20h],0FFFFFFFFFFFFFFFEh  
+00007FF78C120BE3 48 8B 05 06 75 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C120BEA 48 33 C4             xor         rax,rsp  
+00007FF78C120BED 48 89 44 24 30       mov         qword ptr [rsp+30h],rax  
+00007FF78C120BF2 48 83 64 24 28 00    and         qword ptr [rsp+28h],0  
+00007FF78C120BF8 48 8B 01             mov         rax,qword ptr [rcx]  
+00007FF78C120BFB 48 8D 54 24 28       lea         rdx,[rsp+28h]  
+00007FF78C120C00 48 8B 40 50          mov         rax,qword ptr [rax+50h]  
+00007FF78C120C04 FF 15 C6 0B 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120C0A 85 C0                test        eax,eax  
+00007FF78C120C0C 78 4D                js          Windows::Storage::Internal::Pickers::IPickerOperation::CreateActivationEventArgs+87h (07FF78C120C5Bh)  
+00007FF78C120C0E 48 8B 54 24 28       mov         rdx,qword ptr [rsp+28h]  
+00007FF78C120C13 48 8B DA             mov         rbx,rdx  
+00007FF78C120C16 48 85 D2             test        rdx,rdx  
+00007FF78C120C19 74 15                je          Windows::Storage::Internal::Pickers::IPickerOperation::CreateActivationEventArgs+5Ch (07FF78C120C30h)  
+00007FF78C120C1B 48 8B 02             mov         rax,qword ptr [rdx]  
+00007FF78C120C1E 48 8B CA             mov         rcx,rdx  
+00007FF78C120C21 48 8B 40 08          mov         rax,qword ptr [rax+8]  
+00007FF78C120C25 FF 15 A5 0B 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120C2B 48 8B 54 24 28       mov         rdx,qword ptr [rsp+28h]  
+00007FF78C120C30 48 85 D2             test        rdx,rdx  
+00007FF78C120C33 74 10                je          Windows::Storage::Internal::Pickers::IPickerOperation::CreateActivationEventArgs+71h (07FF78C120C45h)  
+00007FF78C120C35 48 8B 0A             mov         rcx,qword ptr [rdx]  
+00007FF78C120C38 48 8B 41 10          mov         rax,qword ptr [rcx+10h]  
+00007FF78C120C3C 48 8B CA             mov         rcx,rdx  
+00007FF78C120C3F FF 15 8B 0B 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120C45 48 8B C3             mov         rax,rbx  
+00007FF78C120C48 48 8B 4C 24 30       mov         rcx,qword ptr [rsp+30h]  
+00007FF78C120C4D 48 33 CC             xor         rcx,rsp  
+00007FF78C120C50 E8 6B 33 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C120C55 48 83 C4 40          add         rsp,40h  
+00007FF78C120C59 5B                   pop         rbx  
+00007FF78C120C5A C3                   ret  
+00007FF78C120C5B 8B C8                mov         ecx,eax  
+00007FF78C120C5D E8 DA 73 FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C120C62 CC                   int         3  
+00007FF78C120C63 CC                   int         3  
+Windows::Storage::Internal::Pickers::IPickerOperation::FindAllProvidersAsync:
+00007FF78C120C64 40 53                push        rbx  
+00007FF78C120C66 48 83 EC 40          sub         rsp,40h  
+00007FF78C120C6A 48 C7 44 24 20 FE FF FF FF mov         qword ptr [rsp+20h],0FFFFFFFFFFFFFFFEh  
+00007FF78C120C73 48 8B 05 76 74 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C120C7A 48 33 C4             xor         rax,rsp  
+00007FF78C120C7D 48 89 44 24 30       mov         qword ptr [rsp+30h],rax  
+00007FF78C120C82 48 83 64 24 28 00    and         qword ptr [rsp+28h],0  
+00007FF78C120C88 48 8B 01             mov         rax,qword ptr [rcx]  
+00007FF78C120C8B 48 8D 54 24 28       lea         rdx,[rsp+28h]  
+00007FF78C120C90 48 8B 40 58          mov         rax,qword ptr [rax+58h]  
+00007FF78C120C94 FF 15 36 0B 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120C9A 85 C0                test        eax,eax  
+00007FF78C120C9C 78 4D                js          Windows::Storage::Internal::Pickers::IPickerOperation::FindAllProvidersAsync+87h (07FF78C120CEBh)  
+00007FF78C120C9E 48 8B 54 24 28       mov         rdx,qword ptr [rsp+28h]  
+00007FF78C120CA3 48 8B DA             mov         rbx,rdx  
+00007FF78C120CA6 48 85 D2             test        rdx,rdx  
+00007FF78C120CA9 74 15                je          Windows::Storage::Internal::Pickers::IPickerOperation::FindAllProvidersAsync+5Ch (07FF78C120CC0h)  
+00007FF78C120CAB 48 8B 02             mov         rax,qword ptr [rdx]  
+00007FF78C120CAE 48 8B CA             mov         rcx,rdx  
+00007FF78C120CB1 48 8B 40 08          mov         rax,qword ptr [rax+8]  
+00007FF78C120CB5 FF 15 15 0B 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120CBB 48 8B 54 24 28       mov         rdx,qword ptr [rsp+28h]  
+00007FF78C120CC0 48 85 D2             test        rdx,rdx  
+00007FF78C120CC3 74 10                je          Windows::Storage::Internal::Pickers::IPickerOperation::FindAllProvidersAsync+71h (07FF78C120CD5h)  
+00007FF78C120CC5 48 8B 0A             mov         rcx,qword ptr [rdx]  
+00007FF78C120CC8 48 8B 41 10          mov         rax,qword ptr [rcx+10h]  
+00007FF78C120CCC 48 8B CA             mov         rcx,rdx  
+00007FF78C120CCF FF 15 FB 0A 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120CD5 48 8B C3             mov         rax,rbx  
+00007FF78C120CD8 48 8B 4C 24 30       mov         rcx,qword ptr [rsp+30h]  
+00007FF78C120CDD 48 33 CC             xor         rcx,rsp  
+00007FF78C120CE0 E8 DB 32 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C120CE5 48 83 C4 40          add         rsp,40h  
+00007FF78C120CE9 5B                   pop         rbx  
+00007FF78C120CEA C3                   ret  
+00007FF78C120CEB 8B C8                mov         ecx,eax  
+00007FF78C120CED E8 4A 73 FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C120CF2 CC                   int         3  
+00007FF78C120CF3 CC                   int         3  
+Windows::Internal::StateRepository::IApplication::ApplicationUserModelId::get:
+00007FF78C120CF4 40 53                push        rbx  
+00007FF78C120CF6 48 83 EC 40          sub         rsp,40h  
+00007FF78C120CFA 48 C7 44 24 20 FE FF FF FF mov         qword ptr [rsp+20h],0FFFFFFFFFFFFFFFEh  
+00007FF78C120D03 48 8B 05 E6 73 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C120D0A 48 33 C4             xor         rax,rsp  
+00007FF78C120D0D 48 89 44 24 38       mov         qword ptr [rsp+38h],rax  
+00007FF78C120D12 33 DB                xor         ebx,ebx  
+00007FF78C120D14 48 89 5C 24 28       mov         qword ptr [rsp+28h],rbx  
+00007FF78C120D19 48 8B 01             mov         rax,qword ptr [rcx]  
+00007FF78C120D1C 48 8D 54 24 28       lea         rdx,[rsp+28h]  
+00007FF78C120D21 48 8B 80 10 01 00 00 mov         rax,qword ptr [rax+110h]  
+00007FF78C120D28 FF 15 A2 0A 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120D2E 85 C0                test        eax,eax  
+00007FF78C120D30 78 45                js          Windows::Internal::StateRepository::IApplication::ApplicationUserModelId::get+83h (07FF78C120D77h)  
+00007FF78C120D32 48 8B 4C 24 28       mov         rcx,qword ptr [rsp+28h]  
+00007FF78C120D37 48 85 C9             test        rcx,rcx  
+00007FF78C120D3A 74 18                je          Windows::Internal::StateRepository::IApplication::ApplicationUserModelId::get+60h (07FF78C120D54h)  
+00007FF78C120D3C 48 8D 54 24 30       lea         rdx,[rsp+30h]  
+00007FF78C120D41 E8 13 4E 04 00       call        WindowsDuplicateString (07FF78C165B59h)  
+00007FF78C120D46 85 C0                test        eax,eax  
+00007FF78C120D48 78 25                js          Windows::Internal::StateRepository::IApplication::ApplicationUserModelId::get+7Bh (07FF78C120D6Fh)  
+00007FF78C120D4A 48 8B 5C 24 30       mov         rbx,qword ptr [rsp+30h]  
+00007FF78C120D4F 48 8B 4C 24 28       mov         rcx,qword ptr [rsp+28h]  
+00007FF78C120D54 E8 FA 4D 04 00       call        WindowsDeleteString (07FF78C165B53h)  
+00007FF78C120D59 48 8B C3             mov         rax,rbx  
+00007FF78C120D5C 48 8B 4C 24 38       mov         rcx,qword ptr [rsp+38h]  
+00007FF78C120D61 48 33 CC             xor         rcx,rsp  
+00007FF78C120D64 E8 57 32 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C120D69 48 83 C4 40          add         rsp,40h  
+00007FF78C120D6D 5B                   pop         rbx  
+00007FF78C120D6E C3                   ret  
+00007FF78C120D6F 8B C8                mov         ecx,eax  
+00007FF78C120D71 E8 C6 72 FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C120D76 CC                   int         3  
+00007FF78C120D77 8B C8                mov         ecx,eax  
+00007FF78C120D79 E8 BE 72 FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C120D7E CC                   int         3  
+00007FF78C120D7F CC                   int         3  
+Windows::Internal::StateRepository::IApplicationStatics::GetByUserAndApplicationUserModelId:
+00007FF78C120D80 40 53                push        rbx  
+00007FF78C120D82 48 83 EC 50          sub         rsp,50h  
+00007FF78C120D86 48 C7 44 24 30 FE FF FF FF mov         qword ptr [rsp+30h],0FFFFFFFFFFFFFFFEh  
+00007FF78C120D8F 48 8B 05 5A 73 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C120D96 48 33 C4             xor         rax,rsp  
+00007FF78C120D99 48 89 44 24 40       mov         qword ptr [rsp+40h],rax  
+00007FF78C120D9E 48 83 64 24 38 00    and         qword ptr [rsp+38h],0  
+00007FF78C120DA4 48 8B 01             mov         rax,qword ptr [rcx]  
+00007FF78C120DA7 4C 8D 4C 24 38       lea         r9,[rsp+38h]  
+00007FF78C120DAC 48 8B 80 F0 00 00 00 mov         rax,qword ptr [rax+0F0h]  
+00007FF78C120DB3 FF 15 17 0A 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120DB9 85 C0                test        eax,eax  
+00007FF78C120DBB 78 4D                js          Windows::Internal::StateRepository::IApplicationStatics::GetByUserAndApplicationUserModelId+8Ah (07FF78C120E0Ah)  
+00007FF78C120DBD 48 8B 54 24 38       mov         rdx,qword ptr [rsp+38h]  
+00007FF78C120DC2 48 8B DA             mov         rbx,rdx  
+00007FF78C120DC5 48 85 D2             test        rdx,rdx  
+00007FF78C120DC8 74 15                je          Windows::Internal::StateRepository::IApplicationStatics::GetByUserAndApplicationUserModelId+5Fh (07FF78C120DDFh)  
+00007FF78C120DCA 48 8B 02             mov         rax,qword ptr [rdx]  
+00007FF78C120DCD 48 8B CA             mov         rcx,rdx  
+00007FF78C120DD0 48 8B 40 08          mov         rax,qword ptr [rax+8]  
+00007FF78C120DD4 FF 15 F6 09 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120DDA 48 8B 54 24 38       mov         rdx,qword ptr [rsp+38h]  
+00007FF78C120DDF 48 85 D2             test        rdx,rdx  
+00007FF78C120DE2 74 10                je          Windows::Internal::StateRepository::IApplicationStatics::GetByUserAndApplicationUserModelId+74h (07FF78C120DF4h)  
+00007FF78C120DE4 48 8B 0A             mov         rcx,qword ptr [rdx]  
+00007FF78C120DE7 48 8B 41 10          mov         rax,qword ptr [rcx+10h]  
+00007FF78C120DEB 48 8B CA             mov         rcx,rdx  
+00007FF78C120DEE FF 15 DC 09 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120DF4 48 8B C3             mov         rax,rbx  
+00007FF78C120DF7 48 8B 4C 24 40       mov         rcx,qword ptr [rsp+40h]  
+00007FF78C120DFC 48 33 CC             xor         rcx,rsp  
+00007FF78C120DFF E8 BC 31 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C120E04 48 83 C4 50          add         rsp,50h  
+00007FF78C120E08 5B                   pop         rbx  
+00007FF78C120E09 C3                   ret  
+00007FF78C120E0A 8B C8                mov         ecx,eax  
+00007FF78C120E0C E8 2B 72 FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C120E11 CC                   int         3  
+00007FF78C120E12 CC                   int         3  
+00007FF78C120E13 CC                   int         3  
+Windows::Storage::Internal::Pickers::IFileSavePickerInfo::AllowedEnterpriseIds::get:
+00007FF78C120E14 40 53                push        rbx  
+00007FF78C120E16 48 83 EC 40          sub         rsp,40h  
+00007FF78C120E1A 48 C7 44 24 20 FE FF FF FF mov         qword ptr [rsp+20h],0FFFFFFFFFFFFFFFEh  
+00007FF78C120E23 48 8B 05 C6 72 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C120E2A 48 33 C4             xor         rax,rsp  
+00007FF78C120E2D 48 89 44 24 30       mov         qword ptr [rsp+30h],rax  
+00007FF78C120E32 48 83 64 24 28 00    and         qword ptr [rsp+28h],0  
+00007FF78C120E38 48 8B 01             mov         rax,qword ptr [rcx]  
+00007FF78C120E3B 48 8D 54 24 28       lea         rdx,[rsp+28h]  
+00007FF78C120E40 48 8B 40 68          mov         rax,qword ptr [rax+68h]  
+00007FF78C120E44 FF 15 86 09 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120E4A 85 C0                test        eax,eax  
+00007FF78C120E4C 78 4D                js          Windows::Storage::Internal::Pickers::IFileSavePickerInfo::AllowedEnterpriseIds::get+87h (07FF78C120E9Bh)  
+00007FF78C120E4E 48 8B 54 24 28       mov         rdx,qword ptr [rsp+28h]  
+00007FF78C120E53 48 8B DA             mov         rbx,rdx  
+00007FF78C120E56 48 85 D2             test        rdx,rdx  
+00007FF78C120E59 74 15                je          Windows::Storage::Internal::Pickers::IFileSavePickerInfo::AllowedEnterpriseIds::get+5Ch (07FF78C120E70h)  
+00007FF78C120E5B 48 8B 02             mov         rax,qword ptr [rdx]  
+00007FF78C120E5E 48 8B CA             mov         rcx,rdx  
+00007FF78C120E61 48 8B 40 08          mov         rax,qword ptr [rax+8]  
+00007FF78C120E65 FF 15 65 09 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120E6B 48 8B 54 24 28       mov         rdx,qword ptr [rsp+28h]  
+00007FF78C120E70 48 85 D2             test        rdx,rdx  
+00007FF78C120E73 74 10                je          Windows::Storage::Internal::Pickers::IFileSavePickerInfo::AllowedEnterpriseIds::get+71h (07FF78C120E85h)  
+00007FF78C120E75 48 8B 0A             mov         rcx,qword ptr [rdx]  
+00007FF78C120E78 48 8B 41 10          mov         rax,qword ptr [rcx+10h]  
+00007FF78C120E7C 48 8B CA             mov         rcx,rdx  
+00007FF78C120E7F FF 15 4B 09 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120E85 48 8B C3             mov         rax,rbx  
+00007FF78C120E88 48 8B 4C 24 30       mov         rcx,qword ptr [rsp+30h]  
+00007FF78C120E8D 48 33 CC             xor         rcx,rsp  
+00007FF78C120E90 E8 2B 31 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C120E95 48 83 C4 40          add         rsp,40h  
+00007FF78C120E99 5B                   pop         rbx  
+00007FF78C120E9A C3                   ret  
+00007FF78C120E9B 8B C8                mov         ecx,eax  
+00007FF78C120E9D E8 9A 71 FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C120EA2 CC                   int         3  
+00007FF78C120EA3 CC                   int         3  
+Windows::Storage::Internal::Pickers::IFileSavePickerInfo::AllowedExtensions::get:
+00007FF78C120EA4 40 53                push        rbx  
+00007FF78C120EA6 48 83 EC 40          sub         rsp,40h  
+00007FF78C120EAA 48 C7 44 24 20 FE FF FF FF mov         qword ptr [rsp+20h],0FFFFFFFFFFFFFFFEh  
+00007FF78C120EB3 48 8B 05 36 72 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C120EBA 48 33 C4             xor         rax,rsp  
+00007FF78C120EBD 48 89 44 24 30       mov         qword ptr [rsp+30h],rax  
+00007FF78C120EC2 48 83 64 24 28 00    and         qword ptr [rsp+28h],0  
+00007FF78C120EC8 48 8B 01             mov         rax,qword ptr [rcx]  
+00007FF78C120ECB 48 8D 54 24 28       lea         rdx,[rsp+28h]  
+00007FF78C120ED0 48 8B 40 38          mov         rax,qword ptr [rax+38h]  
+00007FF78C120ED4 FF 15 F6 08 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120EDA 85 C0                test        eax,eax  
+00007FF78C120EDC 78 4D                js          Windows::Storage::Internal::Pickers::IFileSavePickerInfo::AllowedExtensions::get+87h (07FF78C120F2Bh)  
+00007FF78C120EDE 48 8B 54 24 28       mov         rdx,qword ptr [rsp+28h]  
+00007FF78C120EE3 48 8B DA             mov         rbx,rdx  
+00007FF78C120EE6 48 85 D2             test        rdx,rdx  
+00007FF78C120EE9 74 15                je          Windows::Storage::Internal::Pickers::IFileSavePickerInfo::AllowedExtensions::get+5Ch (07FF78C120F00h)  
+00007FF78C120EEB 48 8B 02             mov         rax,qword ptr [rdx]  
+00007FF78C120EEE 48 8B CA             mov         rcx,rdx  
+00007FF78C120EF1 48 8B 40 08          mov         rax,qword ptr [rax+8]  
+00007FF78C120EF5 FF 15 D5 08 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120EFB 48 8B 54 24 28       mov         rdx,qword ptr [rsp+28h]  
+00007FF78C120F00 48 85 D2             test        rdx,rdx  
+00007FF78C120F03 74 10                je          Windows::Storage::Internal::Pickers::IFileSavePickerInfo::AllowedExtensions::get+71h (07FF78C120F15h)  
+00007FF78C120F05 48 8B 0A             mov         rcx,qword ptr [rdx]  
+00007FF78C120F08 48 8B 41 10          mov         rax,qword ptr [rcx+10h]  
+00007FF78C120F0C 48 8B CA             mov         rcx,rdx  
+00007FF78C120F0F FF 15 BB 08 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120F15 48 8B C3             mov         rax,rbx  
+00007FF78C120F18 48 8B 4C 24 30       mov         rcx,qword ptr [rsp+30h]  
+00007FF78C120F1D 48 33 CC             xor         rcx,rsp  
+00007FF78C120F20 E8 9B 30 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C120F25 48 83 C4 40          add         rsp,40h  
+00007FF78C120F29 5B                   pop         rbx  
+00007FF78C120F2A C3                   ret  
+00007FF78C120F2B 8B C8                mov         ecx,eax  
+00007FF78C120F2D E8 0A 71 FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C120F32 CC                   int         3  
+00007FF78C120F33 CC                   int         3  
+Windows::Storage::Internal::Pickers::IFileSavePickerInfo::CommitButtonText::get:
+00007FF78C120F34 40 53                push        rbx  
+00007FF78C120F36 48 83 EC 40          sub         rsp,40h  
+00007FF78C120F3A 48 C7 44 24 20 FE FF FF FF mov         qword ptr [rsp+20h],0FFFFFFFFFFFFFFFEh  
+00007FF78C120F43 48 8B 05 A6 71 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C120F4A 48 33 C4             xor         rax,rsp  
+00007FF78C120F4D 48 89 44 24 38       mov         qword ptr [rsp+38h],rax  
+00007FF78C120F52 33 DB                xor         ebx,ebx  
+00007FF78C120F54 48 89 5C 24 28       mov         qword ptr [rsp+28h],rbx  
+00007FF78C120F59 48 8B 01             mov         rax,qword ptr [rcx]  
+00007FF78C120F5C 48 8D 54 24 28       lea         rdx,[rsp+28h]  
+00007FF78C120F61 48 8B 40 70          mov         rax,qword ptr [rax+70h]  
+00007FF78C120F65 FF 15 65 08 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120F6B 85 C0                test        eax,eax  
+00007FF78C120F6D 78 45                js          Windows::Storage::Internal::Pickers::IFileSavePickerInfo::CommitButtonText::get+80h (07FF78C120FB4h)  
+00007FF78C120F6F 48 8B 4C 24 28       mov         rcx,qword ptr [rsp+28h]  
+00007FF78C120F74 48 85 C9             test        rcx,rcx  
+00007FF78C120F77 74 18                je          Windows::Storage::Internal::Pickers::IFileSavePickerInfo::CommitButtonText::get+5Dh (07FF78C120F91h)  
+00007FF78C120F79 48 8D 54 24 30       lea         rdx,[rsp+30h]  
+00007FF78C120F7E E8 D6 4B 04 00       call        WindowsDuplicateString (07FF78C165B59h)  
+00007FF78C120F83 85 C0                test        eax,eax  
+00007FF78C120F85 78 25                js          Windows::Storage::Internal::Pickers::IFileSavePickerInfo::CommitButtonText::get+78h (07FF78C120FACh)  
+00007FF78C120F87 48 8B 5C 24 30       mov         rbx,qword ptr [rsp+30h]  
+00007FF78C120F8C 48 8B 4C 24 28       mov         rcx,qword ptr [rsp+28h]  
+00007FF78C120F91 E8 BD 4B 04 00       call        WindowsDeleteString (07FF78C165B53h)  
+00007FF78C120F96 48 8B C3             mov         rax,rbx  
+00007FF78C120F99 48 8B 4C 24 38       mov         rcx,qword ptr [rsp+38h]  
+00007FF78C120F9E 48 33 CC             xor         rcx,rsp  
+00007FF78C120FA1 E8 1A 30 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C120FA6 48 83 C4 40          add         rsp,40h  
+00007FF78C120FAA 5B                   pop         rbx  
+00007FF78C120FAB C3                   ret  
+00007FF78C120FAC 8B C8                mov         ecx,eax  
+00007FF78C120FAE E8 89 70 FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C120FB3 CC                   int         3  
+00007FF78C120FB4 8B C8                mov         ecx,eax  
+00007FF78C120FB6 E8 81 70 FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C120FBB CC                   int         3  
+Windows::Storage::Internal::Pickers::IFileSavePickerInfo::DefaultFileExtension::get:
+00007FF78C120FBC 40 53                push        rbx  
+00007FF78C120FBE 48 83 EC 40          sub         rsp,40h  
+00007FF78C120FC2 48 C7 44 24 20 FE FF FF FF mov         qword ptr [rsp+20h],0FFFFFFFFFFFFFFFEh  
+00007FF78C120FCB 48 8B 05 1E 71 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C120FD2 48 33 C4             xor         rax,rsp  
+00007FF78C120FD5 48 89 44 24 38       mov         qword ptr [rsp+38h],rax  
+00007FF78C120FDA 33 DB                xor         ebx,ebx  
+00007FF78C120FDC 48 89 5C 24 28       mov         qword ptr [rsp+28h],rbx  
+00007FF78C120FE1 48 8B 01             mov         rax,qword ptr [rcx]  
+00007FF78C120FE4 48 8D 54 24 28       lea         rdx,[rsp+28h]  
+00007FF78C120FE9 48 8B 40 58          mov         rax,qword ptr [rax+58h]  
+00007FF78C120FED FF 15 DD 07 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C120FF3 85 C0                test        eax,eax  
+00007FF78C120FF5 78 45                js          Windows::Storage::Internal::Pickers::IFileSavePickerInfo::DefaultFileExtension::get+80h (07FF78C12103Ch)  
+00007FF78C120FF7 48 8B 4C 24 28       mov         rcx,qword ptr [rsp+28h]  
+00007FF78C120FFC 48 85 C9             test        rcx,rcx  
+00007FF78C120FFF 74 18                je          Windows::Storage::Internal::Pickers::IFileSavePickerInfo::DefaultFileExtension::get+5Dh (07FF78C121019h)  
+00007FF78C121001 48 8D 54 24 30       lea         rdx,[rsp+30h]  
+00007FF78C121006 E8 4E 4B 04 00       call        WindowsDuplicateString (07FF78C165B59h)  
+00007FF78C12100B 85 C0                test        eax,eax  
+00007FF78C12100D 78 25                js          Windows::Storage::Internal::Pickers::IFileSavePickerInfo::DefaultFileExtension::get+78h (07FF78C121034h)  
+00007FF78C12100F 48 8B 5C 24 30       mov         rbx,qword ptr [rsp+30h]  
+00007FF78C121014 48 8B 4C 24 28       mov         rcx,qword ptr [rsp+28h]  
+00007FF78C121019 E8 35 4B 04 00       call        WindowsDeleteString (07FF78C165B53h)  
+00007FF78C12101E 48 8B C3             mov         rax,rbx  
+00007FF78C121021 48 8B 4C 24 38       mov         rcx,qword ptr [rsp+38h]  
+00007FF78C121026 48 33 CC             xor         rcx,rsp  
+00007FF78C121029 E8 92 2F 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C12102E 48 83 C4 40          add         rsp,40h  
+00007FF78C121032 5B                   pop         rbx  
+00007FF78C121033 C3                   ret  
+00007FF78C121034 8B C8                mov         ecx,eax  
+00007FF78C121036 E8 01 70 FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C12103B CC                   int         3  
+00007FF78C12103C 8B C8                mov         ecx,eax  
+00007FF78C12103E E8 F9 6F FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C121043 CC                   int         3  
+Windows::Storage::Internal::Pickers::IFileSavePickerBasket::ProvidedFileFullPath::get:
+00007FF78C121044 40 53                push        rbx  
+00007FF78C121046 48 83 EC 40          sub         rsp,40h  
+00007FF78C12104A 48 C7 44 24 20 FE FF FF FF mov         qword ptr [rsp+20h],0FFFFFFFFFFFFFFFEh  
+00007FF78C121053 48 8B 05 96 70 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C12105A 48 33 C4             xor         rax,rsp  
+00007FF78C12105D 48 89 44 24 38       mov         qword ptr [rsp+38h],rax  
+00007FF78C121062 33 DB                xor         ebx,ebx  
+00007FF78C121064 48 89 5C 24 28       mov         qword ptr [rsp+28h],rbx  
+00007FF78C121069 48 8B 01             mov         rax,qword ptr [rcx]  
+00007FF78C12106C 48 8D 54 24 28       lea         rdx,[rsp+28h]  
+00007FF78C121071 48 8B 40 50          mov         rax,qword ptr [rax+50h]  
+00007FF78C121075 FF 15 55 07 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C12107B 85 C0                test        eax,eax  
+00007FF78C12107D 78 45                js          Windows::Storage::Internal::Pickers::IFileSavePickerBasket::ProvidedFileFullPath::get+80h (07FF78C1210C4h)  
+00007FF78C12107F 48 8B 4C 24 28       mov         rcx,qword ptr [rsp+28h]  
+00007FF78C121084 48 85 C9             test        rcx,rcx  
+00007FF78C121087 74 18                je          Windows::Storage::Internal::Pickers::IFileSavePickerBasket::ProvidedFileFullPath::get+5Dh (07FF78C1210A1h)  
+00007FF78C121089 48 8D 54 24 30       lea         rdx,[rsp+30h]  
+00007FF78C12108E E8 C6 4A 04 00       call        WindowsDuplicateString (07FF78C165B59h)  
+00007FF78C121093 85 C0                test        eax,eax  
+00007FF78C121095 78 25                js          Windows::Storage::Internal::Pickers::IFileSavePickerBasket::ProvidedFileFullPath::get+78h (07FF78C1210BCh)  
+00007FF78C121097 48 8B 5C 24 30       mov         rbx,qword ptr [rsp+30h]  
+00007FF78C12109C 48 8B 4C 24 28       mov         rcx,qword ptr [rsp+28h]  
+00007FF78C1210A1 E8 AD 4A 04 00       call        WindowsDeleteString (07FF78C165B53h)  
+00007FF78C1210A6 48 8B C3             mov         rax,rbx  
+00007FF78C1210A9 48 8B 4C 24 38       mov         rcx,qword ptr [rsp+38h]  
+00007FF78C1210AE 48 33 CC             xor         rcx,rsp  
+00007FF78C1210B1 E8 0A 2F 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C1210B6 48 83 C4 40          add         rsp,40h  
+00007FF78C1210BA 5B                   pop         rbx  
+00007FF78C1210BB C3                   ret  
+00007FF78C1210BC 8B C8                mov         ecx,eax  
+00007FF78C1210BE E8 79 6F FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C1210C3 CC                   int         3  
+00007FF78C1210C4 8B C8                mov         ecx,eax  
+00007FF78C1210C6 E8 71 6F FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C1210CB CC                   int         3  
+Windows::Internal::StateRepository::IApplicationExtension::GetApplication:
+00007FF78C1210CC 40 53                push        rbx  
+00007FF78C1210CE 48 83 EC 40          sub         rsp,40h  
+00007FF78C1210D2 48 C7 44 24 20 FE FF FF FF mov         qword ptr [rsp+20h],0FFFFFFFFFFFFFFFEh  
+00007FF78C1210DB 48 8B 05 0E 70 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C1210E2 48 33 C4             xor         rax,rsp  
+00007FF78C1210E5 48 89 44 24 30       mov         qword ptr [rsp+30h],rax  
+00007FF78C1210EA 48 83 64 24 28 00    and         qword ptr [rsp+28h],0  
+00007FF78C1210F0 48 8B 01             mov         rax,qword ptr [rcx]  
+00007FF78C1210F3 48 8D 54 24 28       lea         rdx,[rsp+28h]  
+00007FF78C1210F8 48 8B 40 60          mov         rax,qword ptr [rax+60h]  
+00007FF78C1210FC FF 15 CE 06 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C121102 85 C0                test        eax,eax  
+00007FF78C121104 78 4D                js          Windows::Internal::StateRepository::IApplicationExtension::GetApplication+87h (07FF78C121153h)  
+00007FF78C121106 48 8B 54 24 28       mov         rdx,qword ptr [rsp+28h]  
+00007FF78C12110B 48 8B DA             mov         rbx,rdx  
+00007FF78C12110E 48 85 D2             test        rdx,rdx  
+00007FF78C121111 74 15                je          Windows::Internal::StateRepository::IApplicationExtension::GetApplication+5Ch (07FF78C121128h)  
+00007FF78C121113 48 8B 02             mov         rax,qword ptr [rdx]  
+00007FF78C121116 48 8B CA             mov         rcx,rdx  
+00007FF78C121119 48 8B 40 08          mov         rax,qword ptr [rax+8]  
+00007FF78C12111D FF 15 AD 06 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C121123 48 8B 54 24 28       mov         rdx,qword ptr [rsp+28h]  
+00007FF78C121128 48 85 D2             test        rdx,rdx  
+00007FF78C12112B 74 10                je          Windows::Internal::StateRepository::IApplicationExtension::GetApplication+71h (07FF78C12113Dh)  
+00007FF78C12112D 48 8B 0A             mov         rcx,qword ptr [rdx]  
+00007FF78C121130 48 8B 41 10          mov         rax,qword ptr [rcx+10h]  
+00007FF78C121134 48 8B CA             mov         rcx,rdx  
+00007FF78C121137 FF 15 93 06 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C12113D 48 8B C3             mov         rax,rbx  
+00007FF78C121140 48 8B 4C 24 30       mov         rcx,qword ptr [rsp+30h]  
+00007FF78C121145 48 33 CC             xor         rcx,rsp  
+00007FF78C121148 E8 73 2E 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C12114D 48 83 C4 40          add         rsp,40h  
+00007FF78C121151 5B                   pop         rbx  
+00007FF78C121152 C3                   ret  
+00007FF78C121153 8B C8                mov         ecx,eax  
+00007FF78C121155 E8 E2 6E FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C12115A CC                   int         3  
+00007FF78C12115B CC                   int         3  
+Windows::Internal::StateRepository::IApplicationResourceResolver::GetSquare44x44LogoLocalizedAsRandomAccessStreamReference:
+00007FF78C12115C 40 53                push        rbx  
+00007FF78C12115E 48 83 EC 40          sub         rsp,40h  
+00007FF78C121162 48 C7 44 24 20 FE FF FF FF mov         qword ptr [rsp+20h],0FFFFFFFFFFFFFFFEh  
+00007FF78C12116B 48 8B 05 7E 6F 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C121172 48 33 C4             xor         rax,rsp  
+00007FF78C121175 48 89 44 24 30       mov         qword ptr [rsp+30h],rax  
+00007FF78C12117A 48 83 64 24 28 00    and         qword ptr [rsp+28h],0  
+00007FF78C121180 48 8B 01             mov         rax,qword ptr [rcx]  
+00007FF78C121183 4C 8D 44 24 28       lea         r8,[rsp+28h]  
+00007FF78C121188 48 8B 40 68          mov         rax,qword ptr [rax+68h]  
+00007FF78C12118C FF 15 3E 06 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C121192 85 C0                test        eax,eax  
+00007FF78C121194 78 4D                js          Windows::Internal::StateRepository::IApplicationResourceResolver::GetSquare44x44LogoLocalizedAsRandomAccessStreamReference+87h (07FF78C1211E3h)  
+00007FF78C121196 48 8B 54 24 28       mov         rdx,qword ptr [rsp+28h]  
+00007FF78C12119B 48 8B DA             mov         rbx,rdx  
+00007FF78C12119E 48 85 D2             test        rdx,rdx  
+00007FF78C1211A1 74 15                je          Windows::Internal::StateRepository::IApplicationResourceResolver::GetSquare44x44LogoLocalizedAsRandomAccessStreamReference+5Ch (07FF78C1211B8h)  
+00007FF78C1211A3 48 8B 02             mov         rax,qword ptr [rdx]  
+00007FF78C1211A6 48 8B CA             mov         rcx,rdx  
+00007FF78C1211A9 48 8B 40 08          mov         rax,qword ptr [rax+8]  
+00007FF78C1211AD FF 15 1D 06 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C1211B3 48 8B 54 24 28       mov         rdx,qword ptr [rsp+28h]  
+00007FF78C1211B8 48 85 D2             test        rdx,rdx  
+00007FF78C1211BB 74 10                je          Windows::Internal::StateRepository::IApplicationResourceResolver::GetSquare44x44LogoLocalizedAsRandomAccessStreamReference+71h (07FF78C1211CDh)  
+00007FF78C1211BD 48 8B 0A             mov         rcx,qword ptr [rdx]  
+00007FF78C1211C0 48 8B 41 10          mov         rax,qword ptr [rcx+10h]  
+00007FF78C1211C4 48 8B CA             mov         rcx,rdx  
+00007FF78C1211C7 FF 15 03 06 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C1211CD 48 8B C3             mov         rax,rbx  
+00007FF78C1211D0 48 8B 4C 24 30       mov         rcx,qword ptr [rsp+30h]  
+00007FF78C1211D5 48 33 CC             xor         rcx,rsp  
+00007FF78C1211D8 E8 E3 2D 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C1211DD 48 83 C4 40          add         rsp,40h  
+00007FF78C1211E1 5B                   pop         rbx  
+00007FF78C1211E2 C3                   ret  
+00007FF78C1211E3 8B C8                mov         ecx,eax  
+00007FF78C1211E5 E8 52 6E FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C1211EA CC                   int         3  
+00007FF78C1211EB CC                   int         3  
+Windows::UI::Xaml::Markup::IXamlType::FullName::get:
+00007FF78C1211EC 40 53                push        rbx  
+00007FF78C1211EE 48 83 EC 40          sub         rsp,40h  
+00007FF78C1211F2 48 C7 44 24 20 FE FF FF FF mov         qword ptr [rsp+20h],0FFFFFFFFFFFFFFFEh  
+00007FF78C1211FB 48 8B 05 EE 6E 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C121202 48 33 C4             xor         rax,rsp  
+00007FF78C121205 48 89 44 24 38       mov         qword ptr [rsp+38h],rax  
+00007FF78C12120A 33 DB                xor         ebx,ebx  
+00007FF78C12120C 48 89 5C 24 28       mov         qword ptr [rsp+28h],rbx  
+00007FF78C121211 48 8B 01             mov         rax,qword ptr [rcx]  
+00007FF78C121214 48 8D 54 24 28       lea         rdx,[rsp+28h]  
+00007FF78C121219 48 8B 40 40          mov         rax,qword ptr [rax+40h]  
+00007FF78C12121D FF 15 AD 05 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C121223 85 C0                test        eax,eax  
+00007FF78C121225 78 45                js          Windows::UI::Xaml::Markup::IXamlType::FullName::get+80h (07FF78C12126Ch)  
+00007FF78C121227 48 8B 4C 24 28       mov         rcx,qword ptr [rsp+28h]  
+00007FF78C12122C 48 85 C9             test        rcx,rcx  
+00007FF78C12122F 74 18                je          Windows::UI::Xaml::Markup::IXamlType::FullName::get+5Dh (07FF78C121249h)  
+00007FF78C121231 48 8D 54 24 30       lea         rdx,[rsp+30h]  
+00007FF78C121236 E8 1E 49 04 00       call        WindowsDuplicateString (07FF78C165B59h)  
+00007FF78C12123B 85 C0                test        eax,eax  
+00007FF78C12123D 78 25                js          Windows::UI::Xaml::Markup::IXamlType::FullName::get+78h (07FF78C121264h)  
+00007FF78C12123F 48 8B 5C 24 30       mov         rbx,qword ptr [rsp+30h]  
+00007FF78C121244 48 8B 4C 24 28       mov         rcx,qword ptr [rsp+28h]  
+00007FF78C121249 E8 05 49 04 00       call        WindowsDeleteString (07FF78C165B53h)  
+00007FF78C12124E 48 8B C3             mov         rax,rbx  
+00007FF78C121251 48 8B 4C 24 38       mov         rcx,qword ptr [rsp+38h]  
+00007FF78C121256 48 33 CC             xor         rcx,rsp  
+00007FF78C121259 E8 62 2D 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C12125E 48 83 C4 40          add         rsp,40h  
+00007FF78C121262 5B                   pop         rbx  
+00007FF78C121263 C3                   ret  
+00007FF78C121264 8B C8                mov         ecx,eax  
+00007FF78C121266 E8 D1 6D FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C12126B CC                   int         3  
+00007FF78C12126C 8B C8                mov         ecx,eax  
+00007FF78C12126E E8 C9 6D FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C121273 CC                   int         3  
+Windows::UI::Popups::IMessageDialog::ShowAsync:
+00007FF78C121274 40 53                push        rbx  
+00007FF78C121276 48 83 EC 40          sub         rsp,40h  
+00007FF78C12127A 48 C7 44 24 20 FE FF FF FF mov         qword ptr [rsp+20h],0FFFFFFFFFFFFFFFEh  
+00007FF78C121283 48 8B 05 66 6E 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C12128A 48 33 C4             xor         rax,rsp  
+00007FF78C12128D 48 89 44 24 30       mov         qword ptr [rsp+30h],rax  
+00007FF78C121292 48 83 64 24 28 00    and         qword ptr [rsp+28h],0  
+00007FF78C121298 48 8B 01             mov         rax,qword ptr [rcx]  
+00007FF78C12129B 48 8D 54 24 28       lea         rdx,[rsp+28h]  
+00007FF78C1212A0 48 8B 40 78          mov         rax,qword ptr [rax+78h]  
+00007FF78C1212A4 FF 15 26 05 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C1212AA 85 C0                test        eax,eax  
+00007FF78C1212AC 78 4D                js          Windows::UI::Popups::IMessageDialog::ShowAsync+87h (07FF78C1212FBh)  
+00007FF78C1212AE 48 8B 54 24 28       mov         rdx,qword ptr [rsp+28h]  
+00007FF78C1212B3 48 8B DA             mov         rbx,rdx  
+00007FF78C1212B6 48 85 D2             test        rdx,rdx  
+00007FF78C1212B9 74 15                je          Windows::UI::Popups::IMessageDialog::ShowAsync+5Ch (07FF78C1212D0h)  
+00007FF78C1212BB 48 8B 02             mov         rax,qword ptr [rdx]  
+00007FF78C1212BE 48 8B CA             mov         rcx,rdx  
+00007FF78C1212C1 48 8B 40 08          mov         rax,qword ptr [rax+8]  
+00007FF78C1212C5 FF 15 05 05 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C1212CB 48 8B 54 24 28       mov         rdx,qword ptr [rsp+28h]  
+00007FF78C1212D0 48 85 D2             test        rdx,rdx  
+00007FF78C1212D3 74 10                je          Windows::UI::Popups::IMessageDialog::ShowAsync+71h (07FF78C1212E5h)  
+00007FF78C1212D5 48 8B 0A             mov         rcx,qword ptr [rdx]  
+00007FF78C1212D8 48 8B 41 10          mov         rax,qword ptr [rcx+10h]  
+00007FF78C1212DC 48 8B CA             mov         rcx,rdx  
+00007FF78C1212DF FF 15 EB 04 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C1212E5 48 8B C3             mov         rax,rbx  
+00007FF78C1212E8 48 8B 4C 24 30       mov         rcx,qword ptr [rsp+30h]  
+00007FF78C1212ED 48 33 CC             xor         rcx,rsp  
+00007FF78C1212F0 E8 CB 2C 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C1212F5 48 83 C4 40          add         rsp,40h  
+00007FF78C1212F9 5B                   pop         rbx  
+00007FF78C1212FA C3                   ret  
+00007FF78C1212FB 8B C8                mov         ecx,eax  
+00007FF78C1212FD E8 3A 6D FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C121302 CC                   int         3  
+00007FF78C121303 CC                   int         3  
+Windows::UI::Popups::IMessageDialogFactory::CreateWithTitle:
+00007FF78C121304 40 53                push        rbx  
+00007FF78C121306 48 83 EC 50          sub         rsp,50h  
+00007FF78C12130A 48 C7 44 24 30 FE FF FF FF mov         qword ptr [rsp+30h],0FFFFFFFFFFFFFFFEh  
+00007FF78C121313 48 8B 05 D6 6D 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C12131A 48 33 C4             xor         rax,rsp  
+00007FF78C12131D 48 89 44 24 40       mov         qword ptr [rsp+40h],rax  
+00007FF78C121322 48 83 64 24 38 00    and         qword ptr [rsp+38h],0  
+00007FF78C121328 48 8B 01             mov         rax,qword ptr [rcx]  
+00007FF78C12132B 4C 8D 4C 24 38       lea         r9,[rsp+38h]  
+00007FF78C121330 48 8B 40 38          mov         rax,qword ptr [rax+38h]  
+00007FF78C121334 FF 15 96 04 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C12133A 85 C0                test        eax,eax  
+00007FF78C12133C 78 4D                js          Windows::UI::Popups::IMessageDialogFactory::CreateWithTitle+87h (07FF78C12138Bh)  
+00007FF78C12133E 48 8B 54 24 38       mov         rdx,qword ptr [rsp+38h]  
+00007FF78C121343 48 8B DA             mov         rbx,rdx  
+00007FF78C121346 48 85 D2             test        rdx,rdx  
+00007FF78C121349 74 15                je          Windows::UI::Popups::IMessageDialogFactory::CreateWithTitle+5Ch (07FF78C121360h)  
+00007FF78C12134B 48 8B 02             mov         rax,qword ptr [rdx]  
+00007FF78C12134E 48 8B CA             mov         rcx,rdx  
+00007FF78C121351 48 8B 40 08          mov         rax,qword ptr [rax+8]  
+00007FF78C121355 FF 15 75 04 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C12135B 48 8B 54 24 38       mov         rdx,qword ptr [rsp+38h]  
+00007FF78C121360 48 85 D2             test        rdx,rdx  
+00007FF78C121363 74 10                je          Windows::UI::Popups::IMessageDialogFactory::CreateWithTitle+71h (07FF78C121375h)  
+00007FF78C121365 48 8B 0A             mov         rcx,qword ptr [rdx]  
+00007FF78C121368 48 8B 41 10          mov         rax,qword ptr [rcx+10h]  
+00007FF78C12136C 48 8B CA             mov         rcx,rdx  
+00007FF78C12136F FF 15 5B 04 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C121375 48 8B C3             mov         rax,rbx  
+00007FF78C121378 48 8B 4C 24 40       mov         rcx,qword ptr [rsp+40h]  
+00007FF78C12137D 48 33 CC             xor         rcx,rsp  
+00007FF78C121380 E8 3B 2C 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C121385 48 83 C4 50          add         rsp,50h  
+00007FF78C121389 5B                   pop         rbx  
+00007FF78C12138A C3                   ret  
+00007FF78C12138B 8B C8                mov         ecx,eax  
+00007FF78C12138D E8 AA 6C FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C121392 CC                   int         3  
+00007FF78C121393 CC                   int         3  
+__abi_unbox<double>:
+00007FF78C121394 48 8B C4             mov         rax,rsp  
+00007FF78C121397 55                   push        rbp  
+00007FF78C121398 48 8B EC             mov         rbp,rsp  
+00007FF78C12139B 48 83 EC 60          sub         rsp,60h  
+00007FF78C12139F 48 C7 45 C0 FE FF FF FF mov         qword ptr [rbp-40h],0FFFFFFFFFFFFFFFEh  
+00007FF78C1213A7 48 89 58 10          mov         qword ptr [rax+10h],rbx  
+00007FF78C1213AB 48 89 78 18          mov         qword ptr [rax+18h],rdi  
+00007FF78C1213AF 48 8B 05 3A 6D 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C1213B6 48 33 C4             xor         rax,rsp  
+00007FF78C1213B9 48 89 45 F0          mov         qword ptr [rbp-10h],rax  
+00007FF78C1213BD 33 DB                xor         ebx,ebx  
+00007FF78C1213BF 48 89 5D E0          mov         qword ptr [rbp-20h],rbx  
+00007FF78C1213C3 48 85 C9             test        rcx,rcx  
+00007FF78C1213C6 74 23                je          __abi_unbox<double>+57h (07FF78C1213EBh)  
+00007FF78C1213C8 48 8B 01             mov         rax,qword ptr [rcx]  
+00007FF78C1213CB 4C 8D 45 E0          lea         r8,[rbp-20h]  
+00007FF78C1213CF 48 8D 15 6A 86 05 00 lea         rdx,[__uuidof_?AU?$IBox@N@Platform@@ (07FF78C179A40h)]  
+00007FF78C1213D6 48 8B 00             mov         rax,qword ptr [rax]  
+00007FF78C1213D9 FF 15 F1 03 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C1213DF 85 C0                test        eax,eax  
+00007FF78C1213E1 0F 88 A4 00 00 00    js          __abi_unbox<double>+0F7h (07FF78C12148Bh)  
+00007FF78C1213E7 48 8B 5D E0          mov         rbx,qword ptr [rbp-20h]  
+00007FF78C1213EB 48 89 5D C8          mov         qword ptr [rbp-38h],rbx  
+00007FF78C1213EF 48 85 DB             test        rbx,rbx  
+00007FF78C1213F2 0F 84 9B 00 00 00    je          __abi_unbox<double>+0FFh (07FF78C121493h)  
+00007FF78C1213F8 48 83 65 D8 00       and         qword ptr [rbp-28h],0  
+00007FF78C1213FD 48 8B 03             mov         rax,qword ptr [rbx]  
+00007FF78C121400 4C 8D 45 D8          lea         r8,[rbp-28h]  
+00007FF78C121404 48 8D 15 35 86 05 00 lea         rdx,[__uuidof_?AU?$IBox@N@Platform@@ (07FF78C179A40h)]  
+00007FF78C12140B 48 8B CB             mov         rcx,rbx  
+00007FF78C12140E 48 8B 00             mov         rax,qword ptr [rax]  
+00007FF78C121411 FF 15 B9 03 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C121417 85 C0                test        eax,eax  
+00007FF78C121419 0F 88 B0 00 00 00    js          __abi_unbox<double>+13Bh (07FF78C1214CFh)  
+00007FF78C12141F 48 8B 7D D8          mov         rdi,qword ptr [rbp-28h]  
+00007FF78C121423 48 89 7D D0          mov         qword ptr [rbp-30h],rdi  
+00007FF78C121427 48 8B 07             mov         rax,qword ptr [rdi]  
+00007FF78C12142A 48 8D 55 E8          lea         rdx,[rbp-18h]  
+00007FF78C12142E 48 8B CF             mov         rcx,rdi  
+00007FF78C121431 48 8B 40 30          mov         rax,qword ptr [rax+30h]  
+00007FF78C121435 FF 15 95 03 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C12143B 85 C0                test        eax,eax  
+00007FF78C12143D 78 44                js          __abi_unbox<double>+0EFh (07FF78C121483h)  
+00007FF78C12143F 48 8B 07             mov         rax,qword ptr [rdi]  
+00007FF78C121442 48 8B CF             mov         rcx,rdi  
+00007FF78C121445 48 8B 40 10          mov         rax,qword ptr [rax+10h]  
+00007FF78C121449 FF 15 81 03 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C12144F 90                   nop  
+00007FF78C121450 48 8B 03             mov         rax,qword ptr [rbx]  
+00007FF78C121453 48 8B CB             mov         rcx,rbx  
+00007FF78C121456 48 8B 40 10          mov         rax,qword ptr [rax+10h]  
+00007FF78C12145A FF 15 70 03 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C121460 F2 0F 10 45 E8       movsd       xmm0,mmword ptr [rbp-18h]  
+00007FF78C121465 48 8B 4D F0          mov         rcx,qword ptr [rbp-10h]  
+00007FF78C121469 48 33 CC             xor         rcx,rsp  
+00007FF78C12146C E8 4F 2B 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C121471 4C 8D 5C 24 60       lea         r11,[rsp+60h]  
+00007FF78C121476 49 8B 5B 18          mov         rbx,qword ptr [r11+18h]  
+00007FF78C12147A 49 8B 7B 20          mov         rdi,qword ptr [r11+20h]  
+00007FF78C12147E 49 8B E3             mov         rsp,r11  
+00007FF78C121481 5D                   pop         rbp  
+00007FF78C121482 C3                   ret  
+00007FF78C121483 8B C8                mov         ecx,eax  
+00007FF78C121485 E8 B2 6B FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C12148A 90                   nop  
+00007FF78C12148B 8B C8                mov         ecx,eax  
+00007FF78C12148D E8 AA 6B FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C121492 90                   nop  
+00007FF78C121493 BA 90 00 00 00       mov         edx,90h  
+00007FF78C121498 8D 4A D8             lea         ecx,[rdx-28h]  
+00007FF78C12149B FF 15 3F 02 05 00    call        qword ptr [__imp_Platform::Details::Heap::AllocateException (07FF78C1716E0h)]  
+00007FF78C1214A1 48 89 45 E8          mov         qword ptr [rbp-18h],rax  
+00007FF78C1214A5 48 8B C8             mov         rcx,rax  
+00007FF78C1214A8 FF 15 DA 01 05 00    call        qword ptr [__imp_Platform::NullReferenceException::NullReferenceException (07FF78C171688h)]  
+00007FF78C1214AE 48 89 45 E8          mov         qword ptr [rbp-18h],rax  
+00007FF78C1214B2 48 8B C8             mov         rcx,rax  
+00007FF78C1214B5 E8 26 6E FD FF       call        __abi_winrt_ptr_ctor (07FF78C0F82E0h)  
+00007FF78C1214BA 48 89 45 D8          mov         qword ptr [rbp-28h],rax  
+00007FF78C1214BE 48 8D 15 AB 33 09 00 lea         rdx,[_TI11PE$AAVNullReferenceException@Platform@@ (07FF78C1B4870h)]  
+00007FF78C1214C5 48 8D 4D D8          lea         rcx,[rbp-28h]  
+00007FF78C1214C9 E8 8B 31 04 00       call        _CxxThrowException (07FF78C164659h)  
+00007FF78C1214CE 90                   nop  
+00007FF78C1214CF 8B C8                mov         ecx,eax  
+00007FF78C1214D1 E8 66 6B FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C1214D6 CC                   int         3  
+00007FF78C1214D7 CC                   int         3  
+FilePicker::ViewModel::ExecuteDelegate::ExecuteDelegate<FilePicker::ViewModel::MainPageVM,void (__cdecl FilePicker::ViewModel::MainPageVM::*)(Platform::Object ^ __ptr64) __ptr64>:
+00007FF78C1214D8 48 8B C4             mov         rax,rsp  
+00007FF78C1214DB 48 89 48 08          mov         qword ptr [rax+8],rcx  
+00007FF78C1214DF 57                   push        rdi  
+00007FF78C1214E0 48 83 EC 40          sub         rsp,40h  
+00007FF78C1214E4 48 C7 40 D8 FE FF FF FF mov         qword ptr [rax-28h],0FFFFFFFFFFFFFFFEh  
+00007FF78C1214EC 48 89 58 10          mov         qword ptr [rax+10h],rbx  
+00007FF78C1214F0 48 89 68 18          mov         qword ptr [rax+18h],rbp  
+00007FF78C1214F4 48 89 70 20          mov         qword ptr [rax+20h],rsi  
+00007FF78C1214F8 49 8B F0             mov         rsi,r8  
+00007FF78C1214FB 48 8B EA             mov         rbp,rdx  
+00007FF78C1214FE 48 8B F9             mov         rdi,rcx  
+00007FF78C121501 48 83 C1 10          add         rcx,10h  
+00007FF78C121505 FF 15 AD 01 05 00    call        qword ptr [__imp_Platform::Delegate::Delegate (07FF78C1716B8h)]  
+00007FF78C12150B 48 8D 05 8E 9A 09 00 lea         rax,[FilePicker::ViewModel::ExecuteDelegate::`vftable' (07FF78C1BAFA0h)]  
+00007FF78C121512 48 89 07             mov         qword ptr [rdi],rax  
+00007FF78C121515 48 8D 05 34 B4 09 00 lea         rax,[FilePicker::ViewModel::ExecuteDelegate::`vftable' (07FF78C1BC950h)]  
+00007FF78C12151C 48 89 47 08          mov         qword ptr [rdi+8],rax  
+00007FF78C121520 48 8D 05 F9 B3 09 00 lea         rax,[FilePicker::ViewModel::ExecuteDelegate::`vftable' (07FF78C1BC920h)]  
+00007FF78C121527 48 89 47 10          mov         qword ptr [rdi+10h],rax  
+00007FF78C12152B 48 8D 05 C6 B3 09 00 lea         rax,[FilePicker::ViewModel::ExecuteDelegate::`vftable' (07FF78C1BC8F8h)]  
+00007FF78C121532 48 89 47 18          mov         qword ptr [rdi+18h],rax  
+00007FF78C121536 48 8D 05 8B B3 09 00 lea         rax,[FilePicker::ViewModel::ExecuteDelegate::`vftable' (07FF78C1BC8C8h)]  
+00007FF78C12153D 48 89 47 20          mov         qword ptr [rdi+20h],rax  
+00007FF78C121541 48 C7 47 30 FF FF FF FF mov         qword ptr [rdi+30h],0FFFFFFFFFFFFFFFFh  
+00007FF78C121549 48 8B 0D 70 2C 0A 00 mov         rcx,qword ptr [__abi_module (07FF78C1C41C0h)]  
+00007FF78C121550 33 DB                xor         ebx,ebx  
+00007FF78C121552 48 85 C9             test        rcx,rcx  
+00007FF78C121555 74 0D                je          FilePicker::ViewModel::ExecuteDelegate::ExecuteDelegate<FilePicker::ViewModel::MainPageVM,void (__cdecl FilePicker::ViewModel::MainPageVM::*)(Platform::Object ^ __ptr64) __ptr64>+8Ch (07FF78C121564h)  
+00007FF78C121557 48 8B 01             mov         rax,qword ptr [rcx]  
+00007FF78C12155A 48 8B 00             mov         rax,qword ptr [rax]  
+00007FF78C12155D FF 15 6D 02 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C121563 90                   nop  
+00007FF78C121564 48 8D 4F 38          lea         rcx,[rdi+38h]  
+00007FF78C121568 48 89 89 00 01 00 00 mov         qword ptr [rcx+100h],rcx  
+00007FF78C12156F 48 89 4C 24 28       mov         qword ptr [rsp+28h],rcx  
+00007FF78C121574 48 85 C9             test        rcx,rcx  
+00007FF78C121577 74 19                je          FilePicker::ViewModel::ExecuteDelegate::ExecuteDelegate<FilePicker::ViewModel::MainPageVM,void (__cdecl FilePicker::ViewModel::MainPageVM::*)(Platform::Object ^ __ptr64) __ptr64>+0BAh (07FF78C121592h)  
+00007FF78C121579 0F 28 06             movaps      xmm0,xmmword ptr [rsi]  
+00007FF78C12157C 66 0F 7F 44 24 30    movdqa      xmmword ptr [rsp+30h],xmm0  
+00007FF78C121582 4C 8D 44 24 30       lea         r8,[rsp+30h]  
+00007FF78C121587 48 8B D5             mov         rdx,rbp  
+00007FF78C12158A E8 25 00 00 00       call        `FilePicker::ViewModel::ExecuteDelegate::ExecuteDelegate<FilePicker::ViewModel::MainPageVM,void (__cdecl FilePicker::ViewModel::MainPageVM::*)(Platform::Object ^)>'::`2'::__abi_PointerToMemberWeakRefCapture::__abi_PointerToMemberWeakRefCapture (07FF78C1215B4h)  
+00007FF78C12158F 48 8B D8             mov         rbx,rax  
+00007FF78C121592 48 89 9F 38 01 00 00 mov         qword ptr [rdi+138h],rbx  
+00007FF78C121599 48 8B C7             mov         rax,rdi  
+00007FF78C12159C 48 8B 5C 24 58       mov         rbx,qword ptr [rsp+58h]  
+00007FF78C1215A1 48 8B 6C 24 60       mov         rbp,qword ptr [rsp+60h]  
+00007FF78C1215A6 48 8B 74 24 68       mov         rsi,qword ptr [rsp+68h]  
+00007FF78C1215AB 48 83 C4 40          add         rsp,40h  
+00007FF78C1215AF 5F                   pop         rdi  
+00007FF78C1215B0 C3                   ret  
+00007FF78C1215B1 CC                   int         3  
+00007FF78C1215B2 CC                   int         3  
+00007FF78C1215B3 CC                   int         3  
+00007FF78C1215B4 4C 8B DC             mov         r11,rsp  
+00007FF78C1215B7 55                   push        rbp  
+00007FF78C1215B8 56                   push        rsi  
+00007FF78C1215B9 57                   push        rdi  
+00007FF78C1215BA 48 83 EC 50          sub         rsp,50h  
+00007FF78C1215BE 49 C7 43 B8 FE FF FF FF mov         qword ptr [r11-48h],0FFFFFFFFFFFFFFFEh  
+00007FF78C1215C6 49 89 5B 18          mov         qword ptr [r11+18h],rbx  
+00007FF78C1215CA 48 8B 05 1F 6B 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C1215D1 48 33 C4             xor         rax,rsp  
+00007FF78C1215D4 48 89 44 24 48       mov         qword ptr [rsp+48h],rax  
+00007FF78C1215D9 49 8B E8             mov         rbp,r8  
+00007FF78C1215DC 4C 8B CA             mov         r9,rdx  
+00007FF78C1215DF 48 8B F1             mov         rsi,rcx  
+00007FF78C1215E2 49 89 4B C0          mov         qword ptr [r11-40h],rcx  
+00007FF78C1215E6 48 8D 05 93 B3 09 00 lea         rax,[FilePicker::ViewModel::ExecuteDelegate::`vftable'+30h (07FF78C1BC980h)]  
+00007FF78C1215ED 48 89 01             mov         qword ptr [rcx],rax  
+00007FF78C1215F0 33 FF                xor         edi,edi  
+00007FF78C1215F2 49 89 7B D8          mov         qword ptr [r11-28h],rdi  
+00007FF78C1215F6 48 85 D2             test        rdx,rdx  
+00007FF78C1215F9 74 27                je          `FilePicker::ViewModel::ExecuteDelegate::ExecuteDelegate<FilePicker::ViewModel::MainPageVM,void (__cdecl FilePicker::ViewModel::MainPageVM::*)(Platform::Object ^)>'::`2'::__abi_PointerToMemberWeakRefCapture::__abi_PointerToMemberWeakRefCapture+6Eh (07FF78C121622h)  
+00007FF78C1215FB 48 8B 02             mov         rax,qword ptr [rdx]  
+00007FF78C1215FE 4D 8D 43 D8          lea         r8,[r11-28h]  
+00007FF78C121602 48 8D 15 EF 65 05 00 lea         rdx,[__uuidof_?AUIWeakReferenceSource@Details@Platform@@ (07FF78C177BF8h)]  
+00007FF78C121609 49 8B C9             mov         rcx,r9  
+00007FF78C12160C 48 8B 00             mov         rax,qword ptr [rax]  
+00007FF78C12160F FF 15 BB 01 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C121615 85 C0                test        eax,eax  
+00007FF78C121617 0F 88 87 00 00 00    js          `FilePicker::ViewModel::ExecuteDelegate::ExecuteDelegate<FilePicker::ViewModel::MainPageVM,void (__cdecl FilePicker::ViewModel::MainPageVM::*)(Platform::Object ^)>'::`2'::__abi_PointerToMemberWeakRefCapture::__abi_PointerToMemberWeakRefCapture+0F0h (07FF78C1216A4h)  
+00007FF78C12161D 48 8B 7C 24 40       mov         rdi,qword ptr [rsp+40h]  
+00007FF78C121622 48 89 7C 24 30       mov         qword ptr [rsp+30h],rdi  
+00007FF78C121627 48 8B CF             mov         rcx,rdi  
+00007FF78C12162A E8 C5 0D FD FF       call        Platform::Details::IWeakReferenceSource::GetWeakReference (07FF78C0F23F4h)  
+00007FF78C12162F 48 8B D8             mov         rbx,rax  
+00007FF78C121632 48 89 44 24 38       mov         qword ptr [rsp+38h],rax  
+00007FF78C121637 48 85 C0             test        rax,rax  
+00007FF78C12163A 74 10                je          `FilePicker::ViewModel::ExecuteDelegate::ExecuteDelegate<FilePicker::ViewModel::MainPageVM,void (__cdecl FilePicker::ViewModel::MainPageVM::*)(Platform::Object ^)>'::`2'::__abi_PointerToMemberWeakRefCapture::__abi_PointerToMemberWeakRefCapture+98h (07FF78C12164Ch)  
+00007FF78C12163C 48 8B 00             mov         rax,qword ptr [rax]  
+00007FF78C12163F 48 8B CB             mov         rcx,rbx  
+00007FF78C121642 48 8B 40 08          mov         rax,qword ptr [rax+8]  
+00007FF78C121646 FF 15 84 01 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C12164C 48 89 5E 08          mov         qword ptr [rsi+8],rbx  
+00007FF78C121650 48 85 DB             test        rbx,rbx  
+00007FF78C121653 74 11                je          `FilePicker::ViewModel::ExecuteDelegate::ExecuteDelegate<FilePicker::ViewModel::MainPageVM,void (__cdecl FilePicker::ViewModel::MainPageVM::*)(Platform::Object ^)>'::`2'::__abi_PointerToMemberWeakRefCapture::__abi_PointerToMemberWeakRefCapture+0B2h (07FF78C121666h)  
+00007FF78C121655 48 8B 03             mov         rax,qword ptr [rbx]  
+00007FF78C121658 48 8B CB             mov         rcx,rbx  
+00007FF78C12165B 48 8B 40 10          mov         rax,qword ptr [rax+10h]  
+00007FF78C12165F FF 15 6B 01 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C121665 90                   nop  
+00007FF78C121666 48 85 FF             test        rdi,rdi  
+00007FF78C121669 74 10                je          `FilePicker::ViewModel::ExecuteDelegate::ExecuteDelegate<FilePicker::ViewModel::MainPageVM,void (__cdecl FilePicker::ViewModel::MainPageVM::*)(Platform::Object ^)>'::`2'::__abi_PointerToMemberWeakRefCapture::__abi_PointerToMemberWeakRefCapture+0C7h (07FF78C12167Bh)  
+00007FF78C12166B 48 8B 17             mov         rdx,qword ptr [rdi]  
+00007FF78C12166E 48 8B CF             mov         rcx,rdi  
+00007FF78C121671 48 8B 42 10          mov         rax,qword ptr [rdx+10h]  
+00007FF78C121675 FF 15 55 01 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C12167B 0F 28 45 00          movaps      xmm0,xmmword ptr [rbp]  
+00007FF78C12167F F3 0F 7F 46 10       movdqu      xmmword ptr [rsi+10h],xmm0  
+00007FF78C121684 48 8B C6             mov         rax,rsi  
+00007FF78C121687 48 8B 4C 24 48       mov         rcx,qword ptr [rsp+48h]  
+00007FF78C12168C 48 33 CC             xor         rcx,rsp  
+00007FF78C12168F E8 2C 29 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C121694 48 8B 9C 24 80 00 00 00 mov         rbx,qword ptr [rsp+80h]  
+00007FF78C12169C 48 83 C4 50          add         rsp,50h  
+00007FF78C1216A0 5F                   pop         rdi  
+00007FF78C1216A1 5E                   pop         rsi  
+00007FF78C1216A2 5D                   pop         rbp  
+00007FF78C1216A3 C3                   ret  
+00007FF78C1216A4 8B C8                mov         ecx,eax  
+00007FF78C1216A6 E8 91 69 FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C1216AB CC                   int         3  
+00007FF78C1216AC CC                   int         3  
+00007FF78C1216AD CC                   int         3  
+00007FF78C1216AE CC                   int         3  
+00007FF78C1216AF CC                   int         3  
+00007FF78C1216B0 48 8B C4             mov         rax,rsp  
+00007FF78C1216B3 55                   push        rbp  
+00007FF78C1216B4 56                   push        rsi  
+00007FF78C1216B5 57                   push        rdi  
+00007FF78C1216B6 48 83 EC 50          sub         rsp,50h  
+00007FF78C1216BA 48 C7 40 C0 FE FF FF FF mov         qword ptr [rax-40h],0FFFFFFFFFFFFFFFEh  
+00007FF78C1216C2 48 89 58 18          mov         qword ptr [rax+18h],rbx  
+00007FF78C1216C6 48 8B 05 23 6A 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C1216CD 48 33 C4             xor         rax,rsp  
+00007FF78C1216D0 48 89 44 24 40       mov         qword ptr [rsp+40h],rax  
+00007FF78C1216D5 48 8B EA             mov         rbp,rdx  
+00007FF78C1216D8 48 8B F1             mov         rsi,rcx  
+00007FF78C1216DB 48 8D 15 36 72 05 00 lea         rdx,[__uuidof_?AU__IMainPageVMPublicNonVirtuals@ViewModel@FilePicker@@ (07FF78C178918h)]  
+00007FF78C1216E2 48 8B 49 08          mov         rcx,qword ptr [rcx+8]  
+00007FF78C1216E6 E8 99 0D FD FF       call        Platform::Details::IWeakReference::Resolve (07FF78C0F2484h)  
+00007FF78C1216EB 48 8B D8             mov         rbx,rax  
+00007FF78C1216EE 48 89 44 24 38       mov         qword ptr [rsp+38h],rax  
+00007FF78C1216F3 48 85 C0             test        rax,rax  
+00007FF78C1216F6 74 10                je          `FilePicker::ViewModel::ExecuteDelegate::ExecuteDelegate<FilePicker::ViewModel::MainPageVM,void (__cdecl FilePicker::ViewModel::MainPageVM::*)(Platform::Object ^)>'::`2'::__abi_PointerToMemberWeakRefCapture::Invoke+58h (07FF78C121708h)  
+00007FF78C1216F8 48 8B 08             mov         rcx,qword ptr [rax]  
+00007FF78C1216FB 48 8B 41 08          mov         rax,qword ptr [rcx+8]  
+00007FF78C1216FF 48 8B CB             mov         rcx,rbx  
+00007FF78C121702 FF 15 C8 00 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C121708 48 89 5C 24 30       mov         qword ptr [rsp+30h],rbx  
+00007FF78C12170D 48 85 DB             test        rbx,rbx  
+00007FF78C121710 74 11                je          `FilePicker::ViewModel::ExecuteDelegate::ExecuteDelegate<FilePicker::ViewModel::MainPageVM,void (__cdecl FilePicker::ViewModel::MainPageVM::*)(Platform::Object ^)>'::`2'::__abi_PointerToMemberWeakRefCapture::Invoke+73h (07FF78C121723h)  
+00007FF78C121712 48 8B 03             mov         rax,qword ptr [rbx]  
+00007FF78C121715 48 8B CB             mov         rcx,rbx  
+00007FF78C121718 48 8B 40 10          mov         rax,qword ptr [rax+10h]  
+00007FF78C12171C FF 15 AE 00 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C121722 90                   nop  
+00007FF78C121723 48 85 DB             test        rbx,rbx  
+00007FF78C121726 0F 84 8F 00 00 00    je          `FilePicker::ViewModel::ExecuteDelegate::ExecuteDelegate<FilePicker::ViewModel::MainPageVM,void (__cdecl FilePicker::ViewModel::MainPageVM::*)(Platform::Object ^)>'::`2'::__abi_PointerToMemberWeakRefCapture::Invoke+10Bh (07FF78C1217BBh)  
+00007FF78C12172C 48 83 64 24 38 00    and         qword ptr [rsp+38h],0  
+00007FF78C121732 48 8B 03             mov         rax,qword ptr [rbx]  
+00007FF78C121735 4C 8D 44 24 38       lea         r8,[rsp+38h]  
+00007FF78C12173A 48 8D 15 D7 71 05 00 lea         rdx,[__uuidof_?AU__IMainPageVMPublicNonVirtuals@ViewModel@FilePicker@@ (07FF78C178918h)]  
+00007FF78C121741 48 8B CB             mov         rcx,rbx  
+00007FF78C121744 48 8B 00             mov         rax,qword ptr [rax]  
+00007FF78C121747 FF 15 83 00 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C12174D 85 C0                test        eax,eax  
+00007FF78C12174F 78 62                js          `FilePicker::ViewModel::ExecuteDelegate::ExecuteDelegate<FilePicker::ViewModel::MainPageVM,void (__cdecl FilePicker::ViewModel::MainPageVM::*)(Platform::Object ^)>'::`2'::__abi_PointerToMemberWeakRefCapture::Invoke+103h (07FF78C1217B3h)  
+00007FF78C121751 48 8B 7C 24 38       mov         rdi,qword ptr [rsp+38h]  
+00007FF78C121756 48 89 7C 24 20       mov         qword ptr [rsp+20h],rdi  
+00007FF78C12175B 48 63 4E 18          movsxd      rcx,dword ptr [rsi+18h]  
+00007FF78C12175F 48 03 CF             add         rcx,rdi  
+00007FF78C121762 48 8B D5             mov         rdx,rbp  
+00007FF78C121765 48 8B 46 10          mov         rax,qword ptr [rsi+10h]  
+00007FF78C121769 FF 15 61 00 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C12176F 90                   nop  
+00007FF78C121770 48 85 FF             test        rdi,rdi  
+00007FF78C121773 74 11                je          `FilePicker::ViewModel::ExecuteDelegate::ExecuteDelegate<FilePicker::ViewModel::MainPageVM,void (__cdecl FilePicker::ViewModel::MainPageVM::*)(Platform::Object ^)>'::`2'::__abi_PointerToMemberWeakRefCapture::Invoke+0D6h (07FF78C121786h)  
+00007FF78C121775 48 8B 07             mov         rax,qword ptr [rdi]  
+00007FF78C121778 48 8B CF             mov         rcx,rdi  
+00007FF78C12177B 48 8B 40 10          mov         rax,qword ptr [rax+10h]  
+00007FF78C12177F FF 15 4B 00 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C121785 90                   nop  
+00007FF78C121786 48 8B 03             mov         rax,qword ptr [rbx]  
+00007FF78C121789 48 8B CB             mov         rcx,rbx  
+00007FF78C12178C 48 8B 40 10          mov         rax,qword ptr [rax+10h]  
+00007FF78C121790 FF 15 3A 00 05 00    call        qword ptr [__guard_dispatch_icall_fptr (07FF78C1717D0h)]  
+00007FF78C121796 48 8B 4C 24 40       mov         rcx,qword ptr [rsp+40h]  
+00007FF78C12179B 48 33 CC             xor         rcx,rsp  
+00007FF78C12179E E8 1D 28 04 00       call        __security_check_cookie (07FF78C163FC0h)  
+00007FF78C1217A3 48 8B 9C 24 80 00 00 00 mov         rbx,qword ptr [rsp+80h]  
+00007FF78C1217AB 48 83 C4 50          add         rsp,50h  
+00007FF78C1217AF 5F                   pop         rdi  
+00007FF78C1217B0 5E                   pop         rsi  
+00007FF78C1217B1 5D                   pop         rbp  
+00007FF78C1217B2 C3                   ret  
+00007FF78C1217B3 8B C8                mov         ecx,eax  
+00007FF78C1217B5 E8 82 68 FD FF       call        __abi_WinRTraiseException (07FF78C0F803Ch)  
+00007FF78C1217BA CC                   int         3  
+00007FF78C1217BB BA 90 00 00 00       mov         edx,90h  
+00007FF78C1217C0 8D 4A D8             lea         ecx,[rdx-28h]  
+00007FF78C1217C3 FF 15 17 FF 04 00    call        qword ptr [__imp_Platform::Details::Heap::AllocateException (07FF78C1716E0h)]  
+00007FF78C1217C9 48 89 44 24 20       mov         qword ptr [rsp+20h],rax  
+00007FF78C1217CE 48 8B C8             mov         rcx,rax  
+00007FF78C1217D1 FF 15 D9 FE 04 00    call        qword ptr [__imp_Platform::DisconnectedException::DisconnectedException (07FF78C1716B0h)]  
+00007FF78C1217D7 48 89 44 24 20       mov         qword ptr [rsp+20h],rax  
+00007FF78C1217DC 48 8B C8             mov         rcx,rax  
+00007FF78C1217DF E8 FC 6A FD FF       call        __abi_winrt_ptr_ctor (07FF78C0F82E0h)  
+00007FF78C1217E4 48 89 44 24 38       mov         qword ptr [rsp+38h],rax  
+00007FF78C1217E9 48 8D 15 F8 2C 09 00 lea         rdx,[_TI11PE$AAVDisconnectedException@Platform@@ (07FF78C1B44E8h)]  
+00007FF78C1217F0 48 8D 4C 24 38       lea         rcx,[rsp+38h]  
+00007FF78C1217F5 E8 5F 2E 04 00       call        _CxxThrowException (07FF78C164659h)  
+00007FF78C1217FA CC                   int         3  
+00007FF78C1217FB CC                   int         3  
+Windows::Foundation::Collections::end<Windows::Internal::StateRepository::Application ^ __ptr64>:
+00007FF78C1217FC 40 57                push        rdi  
+00007FF78C1217FE 48 83 EC 50          sub         rsp,50h  
+00007FF78C121802 48 C7 44 24 20 FE FF FF FF mov         qword ptr [rsp+20h],0FFFFFFFFFFFFFFFEh  
+00007FF78C12180B 48 89 5C 24 70       mov         qword ptr [rsp+70h],rbx  
+00007FF78C121810 48 89 74 24 78       mov         qword ptr [rsp+78h],rsi  
+00007FF78C121815 48 8B 05 D4 68 09 00 mov         rax,qword ptr [__security_cookie (07FF78C1B80F0h)]  
+00007FF78C12181C 48 33 C4             xor         rax,rsp  
+00007FF78C12181F 48 89 44 24 40       mov         qword ptr [rsp+40h],rax  
+00007FF78C121824 48 8B FA             mov         rdi,rdx  
+00007FF78C121827 48 8B F1             mov         rsi,rcx  
+00007FF78C12182A 48 89 4C 24 38       mov         qword ptr [rsp+38h],rcx  
+00007FF78C12182F 48 85 D2             test        rdx,rdx  
+00007FF78C121832 74 10                je          Windows::Foundation::Collections::end<Windows::Internal::StateRepository::Application ^ __ptr64>+48h (07FF78C121844h)  
+00007FF78C121834 48 8B 02             mov         rax,qword ptr [rdx]  
+00007FF78C121837 48 8B CA             mov         rcx,rdx  
+00007FF78C12183A 48 8B 40 08          mov         rax,qword ptr [rax+8]  
